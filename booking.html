@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking — Sydney Small Talent Agency</title>
+<meta name="description" content="A calendar-style booking page for Sydney Small Talent Agency where visitors see available days and times and pick an open slot to request a consultation. C">
+<link rel="canonical" href="https://sydney-small-talent-062c.sites.tibly.ai/booking">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sydney-small-talent-062c.sites.tibly.ai/booking">
+<meta property="og:site_name" content="Sydney Small Talent Agency">
+<meta property="og:title" content="Booking — Sydney Small Talent Agency">
+<meta property="og:description" content="A calendar-style booking page for Sydney Small Talent Agency where visitors see available days and times and pick an open slot to request a consultation. C">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-brand-50: #f5f5f5;
+  --color-brand-100: #e8e8e8;
+  --color-brand-200: #d1d1d1;
+  --color-brand-300: #b0b0b0;
+  --color-brand-400: #808080;
+  --color-brand-500: #4d4d4d;
+  --color-brand-600: #262626;
+  --color-brand-700: #1a1a1a;
+  --color-brand-800: #0d0d0d;
+  --color-brand-900: #000000;
+
+  --color-accent-50: #fbf6e7;
+  --color-accent-100: #f5e9c2;
+  --color-accent-300: #e3c766;
+  --color-accent-500: #d4af37;
+  --color-accent-600: #b8952c;
+  --color-accent-900: #6b5514;
+
+  --color-surface: #ffffff;
+  --color-bg: #fafafa;
+  --color-secondary: #e8e8e8;
+  --color-ink: #1a1a1a;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+@layer components {
+  .btn {
+    @apply inline-block bg-accent-500 text-brand-900 font-body font-semibold px-6 py-3 rounded-md hover:bg-accent-600 transition-colors duration-200;
+  }
+  .btn-secondary {
+    @apply inline-block bg-transparent border border-brand-900 text-brand-900 font-body font-semibold px-6 py-3 rounded-md hover:bg-brand-900 hover:text-surface transition-colors duration-200;
+  }
+  .card {
+    @apply bg-surface rounded-lg p-6 border border-secondary shadow-sm;
+  }
+}
+</style>
+</head>
+<body>
+<!-- block:header -->
+<header class="bg-surface border-b border-secondary sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <a href="#top" class="font-display text-2xl tracking-wide text-ink">
+      Sydney Small <span class="text-accent-500">Talent Agency</span>
+    </a>
+    <nav class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-body font-medium text-brand-600">
+      <a href="#about" class="hover:text-accent-500 transition-colors">About</a>
+      <a href="#services" class="hover:text-accent-500 transition-colors">Services</a>
+      <a href="#booking" class="hover:text-accent-500 transition-colors">Booking</a>
+      <a href="#contact" class="hover:text-accent-500 transition-colors">Contact</a>
+    </nav>
+    <a href="#booking" class="btn text-sm py-2 px-5 self-start md:self-auto">Book a Meeting</a>
+  </div>
+</header>
+<!-- /block:header -->
+<!-- block:app -->
+<script type="importmap">
+{"imports":{
+"react":"https://esm.sh/react@18.3.1",
+"react/jsx-runtime":"https://esm.sh/react@18.3.1/jsx-runtime",
+"react-dom/client":"https://esm.sh/react-dom@18.3.1/client",
+"@neondatabase/auth":"https://esm.sh/@neondatabase/auth",
+"@neondatabase/postgrest-js":"https://esm.sh/@neondatabase/postgrest-js"
+}}
+</script>
+<section class="section app-section" data-block="app">
+  <div id="tibly-app-root"></div>
+</section>
+<script type="module" src="/assets/booking.js"></script>
+<!-- /block:app -->
+<!-- block:footer -->
+<footer class="bg-brand-900 text-brand-50">
+  <div class="max-w-6xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-3">
+    <div>
+      <h2 class="font-display text-xl text-surface mb-3">Sydney Small</h2>
+      <p class="font-body text-sm text-brand-200 leading-relaxed">
+        Talent representation based in New York, connecting exceptional
+        performers with exceptional opportunities.
+      </p>
+    </div>
+    <div class="font-body text-sm text-brand-200 space-y-2">
+      <h3 class="font-display text-base text-surface mb-2">Contact</h3>
+      <p>Email: hello@sydneysmalltalent.com</p>
+      <p>Phone: (212) 555-0148</p>
+      <p>New York, NY</p>
+    </div>
+    <div>
+      <h3 class="font-display text-base text-surface mb-2">Navigate</h3>
+      <nav class="flex flex-col gap-2 font-body text-sm text-brand-200">
+        <a href="#about" class="hover:text-accent-500 transition-colors">About</a>
+        <a href="#services" class="hover:text-accent-500 transition-colors">Services</a>
+        <a href="#booking" class="hover:text-accent-500 transition-colors">Booking</a>
+        <a href="#contact" class="hover:text-accent-500 transition-colors">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="border-t border-brand-700 py-6 text-center text-xs font-body text-brand-400">
+    &copy; 2024 Sydney Small Talent Agency. All rights reserved.
+  </div>
+</footer>
+<!-- /block:footer -->
+  <script async src="https://api.tibly.ai/widget/v1.js"></script>
+</body>
+</html>
