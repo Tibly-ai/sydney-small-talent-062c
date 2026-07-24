@@ -16,52 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<style type="text/tailwindcss">
-@theme {
-  --color-brand-50: #f5f5f5;
-  --color-brand-100: #e8e8e8;
-  --color-brand-200: #d1d1d1;
-  --color-brand-300: #b0b0b0;
-  --color-brand-400: #808080;
-  --color-brand-500: #4d4d4d;
-  --color-brand-600: #262626;
-  --color-brand-700: #1a1a1a;
-  --color-brand-800: #0d0d0d;
-  --color-brand-900: #000000;
-
-  --color-accent-50: #fbf6e7;
-  --color-accent-100: #f5e9c2;
-  --color-accent-300: #e3c766;
-  --color-accent-500: #d4af37;
-  --color-accent-600: #b8952c;
-  --color-accent-900: #6b5514;
-
-  --color-surface: #ffffff;
-  --color-bg: #fafafa;
-  --color-secondary: #e8e8e8;
-  --color-ink: #1a1a1a;
-
-  --font-display: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
-
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-}
-
-@layer components {
-  .btn {
-    @apply inline-block bg-accent-500 text-brand-900 font-body font-semibold px-6 py-3 rounded-md hover:bg-accent-600 transition-colors duration-200;
-  }
-  .btn-secondary {
-    @apply inline-block bg-transparent border border-brand-900 text-brand-900 font-body font-semibold px-6 py-3 rounded-md hover:bg-brand-900 hover:text-surface transition-colors duration-200;
-  }
-  .card {
-    @apply bg-surface rounded-lg p-6 border border-secondary shadow-sm;
-  }
-}
-</style>
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <!-- block:header -->
@@ -73,7 +28,6 @@
     <nav class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-body font-medium text-brand-600">
       <a href="#about" class="hover:text-accent-500 transition-colors">About</a>
       <a href="#services" class="hover:text-accent-500 transition-colors">Services</a>
-      <a href="#booking" class="hover:text-accent-500 transition-colors">Booking</a>
       <a href="/booking" class="hover:text-accent-500 transition-colors">Booking</a>
       <a href="#contact" class="hover:text-accent-500 transition-colors">Contact</a>
     </nav>
